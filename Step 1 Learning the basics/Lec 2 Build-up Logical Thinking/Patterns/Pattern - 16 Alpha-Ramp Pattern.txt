@@ -1,0 +1,25 @@
+
+#include <iostream>
+
+int main() {
+    int n = 4;
+    for(int i = 0; i <=n; i++){
+        for(int j = 0; j<=i; j++){
+            char ans= 'A'+ i;
+            std::cout<<ans;
+        }
+        std::cout<<"\n";
+    }
+    return 0;
+}
+
+
+//--------------------------------------------------------
+
+
+OUTPUT
+A
+BB
+CCC
+DDDD
+EEEEE

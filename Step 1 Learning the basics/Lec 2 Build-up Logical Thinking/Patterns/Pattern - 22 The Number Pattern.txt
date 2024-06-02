@@ -1,0 +1,32 @@
+
+#include <iostream>
+int main() {
+    int n = 4;
+    for(int i = 0; i <2*n -1; i++){
+        for(int j = 0; j<2*n -1;j++){
+            int topdist = i;
+            int rightdist = (2*n-2) - j;
+            int leftdist = j;
+            int botmdist = (2*n-2) - i;
+            
+            int mintb = std::min(topdist,botmdist);
+            int minrl = std::min(rightdist,leftdist);
+            int minval = std::min(mintb,minrl);
+            std::cout<<n - minval;
+        }
+        std::cout<<"\n";
+    }
+    return 0;
+}
+
+//--------------------------------------------------------
+
+OUTPUT
+
+4444444
+4333334
+4322234
+4321234
+4322234
+4333334
+4444444

@@ -2,11 +2,11 @@
 
 int main() {
     
-    int n = 3;
+    int n = 4;
 
-    for(int i = 0; i < n; i++){
-    	for(int j = 0; j < i; j++){
-    		std::cout<< "* ";
+    for(int i = n; i > 0; i--){
+    	for(int j = 1; j < i; j++){
+    		std::cout<< j;
     		
     	}
     	std::cout<< "\n";
@@ -18,6 +18,6 @@ int main() {
 
 OUTPUT
 
-*
-* *
-* * *
+123
+12
+1

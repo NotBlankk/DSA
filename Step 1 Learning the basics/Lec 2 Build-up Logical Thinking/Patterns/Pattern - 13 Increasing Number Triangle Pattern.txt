@@ -1,0 +1,24 @@
+
+#include <iostream>
+
+int main() {
+    int n = 4;
+    int counter = 1;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < i; j++){
+            std::cout<< counter++ << " ";
+        }
+        std::cout<<"\n";
+    }
+    return 0;
+}
+
+
+//--------------------------------------------------------
+
+
+OUTPUT
+
+1 
+2 3 
+4 5 6 
