@@ -1,0 +1,25 @@
+bool isPalindrome(int x) {
+    if(x < 0){
+        return false;
+    }
+    int temp = x;
+    int ans = 0;
+    while(temp != 0){
+        int digi = temp%10;
+        if((ans > INT_MAX/10 ) || (ans < INT_MIN/10)){
+            return 0;
+        }
+        ans = (ans*10) + digi;
+        temp = temp/10;
+    }
+    cout << ans << " "<< x;
+    return ans == x;
+}
+
+//-----------------------------------------------------------------------------
+
+Example 1:
+
+Input: x = 121
+Output: true
+Explanation: 121 reads as 121 from left to right and from right to left.

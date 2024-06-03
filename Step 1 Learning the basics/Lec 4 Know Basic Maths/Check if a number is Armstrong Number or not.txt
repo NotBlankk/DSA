@@ -1,0 +1,25 @@
+bool isArmstrong(int num) {
+    
+    int k = to_string(num).length();
+    
+    int sum = 0;
+    
+    int n = num;
+    
+    while(n > 0){
+       
+        int ld = n % 10;
+        
+        sum += pow(ld, k); 
+        
+        n = n / 10;
+    }
+    
+    return sum == num ? true : false;
+}
+
+//-----------------------------------------------------------------------------
+
+Example 1:
+Input:N = 153
+Output:True
