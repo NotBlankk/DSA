@@ -1,0 +1,26 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+void insertionsort(int arr[], int n){
+    
+    for(int i = 0; i < n; i++){
+        int j = i;
+        while(j > 0 && arr[j - 1] > arr[j]){
+            int temp = arr[j-1];
+            arr[j-1] = arr[j];
+            arr[j] = temp;
+            j--;
+        }
+    }
+    
+}
+
+int main() {
+    // Write C++ code here
+    int n = 5;
+    int arr[n] = {6, 4, 3, 2, 1};
+    insertionsort(arr, n);
+    cout << arr[0];
+
+    return 0;
+}
