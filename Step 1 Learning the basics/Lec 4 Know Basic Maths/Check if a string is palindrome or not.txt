@@ -1,0 +1,30 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+bool checkpalind(int i, int j, string n){
+    if(i ==j ){
+        return true;
+    }
+        
+    if(n[i] != n[j]){
+        return false;
+    }
+    i = i+ 1;
+    j = j - 1;
+    //cout << i << j<< endl;
+    checkpalind(i, j, n);
+    
+    return true;
+}
+int main() {
+    
+    
+    string st = "ab";
+    int i = 0;
+    int j = st.length() - 1;
+    //cout << "J is" << j << endl;
+    bool ans = checkpalind(i, j, st);
+    cout << ans;
+
+    return 0;
+}
